@@ -65,7 +65,7 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: 'wget --no-check-certificate https://github.com/aglover/ubuntu-equip/raw/master/equip_java7_64.sh && bash equip_java7_64.sh'
-  config.vm.provision "shell", path: 'setup.sh'
+  config.vm.provision "shell", path: '.config/setup.sh'
 
   config.vm.hostname = "java.box.nabsha.dev"  
 end
